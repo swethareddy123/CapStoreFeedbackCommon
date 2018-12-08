@@ -16,6 +16,18 @@ public class CapstoreDaoImpl implements ICapstoreDao{
 	@PersistenceContext
 	EntityManager entitymanager;
 
+	@Override
+	public String save(FeedbackCommon fc) {
+		entitymanager.persist(fc);
+		entitymanager.flush();
+		return fc.getMerc_id();
+
+	}
+
+
+
+
+	
 	
 
 	@Override
@@ -29,12 +41,12 @@ public class CapstoreDaoImpl implements ICapstoreDao{
 
 	
 	
+	
+	
 	@Override
-	public FeedbackCommon search(int mercId) {
+	public FeedbackCommon search(String mercId) {
 		// TODO Auto-generated method stub
-		System.out.println("daosearch");
 		FeedbackCommon fc = entitymanager.find(FeedbackCommon.class, mercId);
-		System.out.println(fc);
 		return fc;
 	}
 
@@ -48,12 +60,7 @@ public class CapstoreDaoImpl implements ICapstoreDao{
 
 
 
-	@Override
-	public int save(FeedbackCommon fc) {
-		entitymanager.persist(fc);
-		entitymanager.flush();
-		return fc.getMerc_id();
 
-	}
+
 	
 }

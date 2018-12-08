@@ -16,6 +16,16 @@ public class CapstoreServiceImpl implements ICapstoreService {
 	ICapstoreDao dao;
 
 	@Override
+	public String save(FeedbackCommon fc) {
+		// TODO Auto-generated method stub
+		return dao.save(fc);
+	}
+
+
+	
+
+	
+	@Override
 	public List<FeedbackCommon> getAllFeedNRes() {
 		// TODO Auto-generated method stub
 		return dao.getAllFeedNRes();
@@ -23,10 +33,11 @@ public class CapstoreServiceImpl implements ICapstoreService {
 
 	
 	
+	
+	
 	@Override
-	public FeedbackCommon search(int query_id) {
+	public FeedbackCommon search(String query_id) {
 		// TODO Auto-generated method stub
-		System.out.println("service search");
 		return dao.search(query_id);
 	}
 
@@ -38,12 +49,8 @@ public class CapstoreServiceImpl implements ICapstoreService {
 
 
 
-	@Override
-	public int save(FeedbackCommon fc) {
-		// TODO Auto-generated method stub
-		return dao.save(fc);
-	}
 
 
-	
+
+
 }

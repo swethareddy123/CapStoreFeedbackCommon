@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-Response Updated Successfully for Customer Id : ${temp.cust_id}<br>
+Response Updated Successfully for Merchant Id : ${q.merc_id}<br>
 <a href = "index.jsp">Home</a>
 </body>
 </html>

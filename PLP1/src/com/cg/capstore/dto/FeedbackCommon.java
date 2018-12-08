@@ -7,35 +7,35 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name="feedbackcommon")
+@Table(name="feedbackcmn")
 public class FeedbackCommon {
 	
 	@Column(name = "cust_id")
 	@NotNull(message = "enter customer Id")
-	private int cust_id;
+	private String cust_id;
 	
 	@Id
 	@Column(name = "merc_id")
 	@NotNull(message = "enter merchant Id")
-	private int merc_id;
+	private String merc_id;
 	
 	
 	private String feedback;
 	private String response;
 
-	public int getCust_id() {
+	public String getCust_id() {
 		return cust_id;
 	}
 
-	public void setCust_id(int cust_id) {
+	public void setCust_id(String cust_id) {
 		this.cust_id = cust_id;
 	}
 
-	public int getMerc_id() {
+	public String getMerc_id() {
 		return merc_id;
 	}
 
-	public void setMerc_id(int merc_id) {
+	public void setMerc_id(String merc_id) {
 		this.merc_id = merc_id;
 	}
 
@@ -61,7 +61,7 @@ public class FeedbackCommon {
 				+ ", feedback=" + feedback + ", response=" + response + "]";
 	}
 
-	public FeedbackCommon(int cust_id, int merc_id, String feedback,
+	public FeedbackCommon(String cust_id, String merc_id, String feedback,
 			String response) {
 		super();
 		this.cust_id = cust_id;

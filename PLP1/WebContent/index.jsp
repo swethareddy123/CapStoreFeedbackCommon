@@ -8,6 +8,7 @@
 </head>
 <body>
 <a href = "givefeedback.obj">Give Feedback</a><br>
+<a href = "getfeednres.obj">View Response</a><br>
 
 
 

@@ -10,11 +10,14 @@ public interface ICapstoreService {
 	
 	
 	
-	public FeedbackCommon search(int query_id);
+	public FeedbackCommon search(String string);
 	public void update(FeedbackCommon query);
 
 
 
-	public int save(FeedbackCommon fc);
+	public String save(FeedbackCommon fc);
+
+
+
 	
 }

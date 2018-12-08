@@ -29,18 +29,18 @@ public class CapstoreController {
 	}
 	@RequestMapping(value="save",method=RequestMethod.POST)
 	public ModelAndView insertFeed(@Valid @ModelAttribute("feed") FeedbackCommon fc,BindingResult result){
-		int id=0;
+		String id="";
 		id=ser.save(fc);
 		return new ModelAndView("index","fc",id);
 	}
-
+	
 	
 	
 	
 	
 	
 	@RequestMapping("getfeednres")
-	public String showMobileList(Model model){
+	public String showFeedList(Model model){
 		List<FeedbackCommon> list = ser.getAllFeedNRes();
 		model.addAttribute("list",list);
 		return "FeedNRes";
@@ -59,11 +59,8 @@ public class CapstoreController {
 	}
 	@RequestMapping("searchquery1")
 	public ModelAndView searchque(@ModelAttribute("my") FeedbackCommon que,Map<String, Object> model){
-		System.out.println("controllersearch");
-		//List<FeedbackCommon> list=ser
 		FeedbackCommon q = ser.search(que.getMerc_id());
-		System.out.println(q);
-		if(q == null || q.getMerc_id() ==0){
+		if(q == null ){
 			return new ModelAndView("failure","queryid",q);
 		}
 		else{
@@ -74,7 +71,7 @@ public class CapstoreController {
 	}
 	@RequestMapping("update")
 	public ModelAndView updatequery(@ModelAttribute("my") FeedbackCommon que){
-		int id = que.getMerc_id();
+		String id = que.getMerc_id();
 		ser.update(que);
 		return new ModelAndView("UpdateSuccess","queryid",id);
 	}

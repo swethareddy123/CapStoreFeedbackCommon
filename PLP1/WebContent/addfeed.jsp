@@ -15,11 +15,11 @@
 		<table>
 			<tr>
 				<td>Customer Id</td>
-				<td><f:input path="cust_id" size="10" placeholder="Customer ID" />
+				<td><f:input path="cust_id" size="30" placeholder="Customer ID" />
 			</tr>
 			<tr>
 				<td>Merchant Id</td>
-				<td><f:input path="merc_id" size="10" placeholder="Merchant ID" />
+				<td><f:input path="merc_id" size="30" placeholder="Merchant ID" />
 			</tr>
 			<tr>
 				<td>Feedback</td>

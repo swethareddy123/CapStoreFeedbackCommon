@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-Feedback Not Found for id: ${temp.merc_id}<br>
+Feedback Not Found for id: ${q.merc_id}<br>
 <a href = "index.jsp">Home</a>
 </body>
 </html>
